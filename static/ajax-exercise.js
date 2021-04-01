@@ -65,7 +65,7 @@ $('#order-form').on('submit', (evt) => {
 
     $.post('/order-melons.json', formInputs, (response) => {
         $('#order-status').text(response.msg);
-    
+    // n python indentation is there so for java u use {} and response is refered back and pulls it over server.py
         if ('qty' > 10) {
             console.log(response.code, response.msg);
         }
