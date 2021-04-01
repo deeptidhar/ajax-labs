@@ -65,5 +65,16 @@ $('#order-form').on('submit', (evt) => {
 
     $.post('/order-melons.json', formInputs, (response) => {
         $('#order-status').text(response.msg);
-    });
-})
+    
+        if ('qty' > 10) {
+            console.log(response.code, response.msg);
+        }
+        else if ('qty' > 0) {
+            console.log
+                (response.code, response.msg)
+        }
+        else {
+            console.log(response.code, response.msg)
+            };
+    })
+});
